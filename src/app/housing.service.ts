@@ -106,12 +106,19 @@ export class HousingService {
     wifi: true,
     laundry: true
   }];
+
   constructor() { }
+
   getAllHousingLocations() : HousingLocation[] {
     return this.housingLocationList;
   }
 
   getHousingLocationById(id: Number) : HousingLocation | undefined {
     return this.housingLocationList.find(housingLocation => housingLocation.id === id);
+  }
+
+  submitApplication(firstName: string, lastName: string, email: string) {
+    console.log('Full name : ',firstName, lastName,', email : ',email);
+    
   }
 }
